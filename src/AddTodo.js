@@ -5,6 +5,7 @@ export default function AddTodo({ todoList, updateTodoList }) {
   const todoInputRef = useRef('');
 
   useEffect(() => {
+    todoInputRef.current.focus();
     if (todoList.length != 0)
       localStorage.setItem('todoList', JSON.stringify(todoList));
   });
