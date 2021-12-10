@@ -1,0 +1,83 @@
+h1 {
+  text-align: center;
+  font-family: 'Courier New', Courier, monospace;
+  color: chocolate;
+}
+
+.delete-btn,
+#add-btn {
+  border: none;
+  float: right;
+  border-radius: 3px;
+  padding: 5px;
+  background-color: red;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.list-item {
+  margin-bottom: 1em;
+}
+
+#list-container,
+p {
+  font-size: 1em;
+  font-weight: 700;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+p {
+  text-align: center;
+  margin-top: 10vh;
+  color: gray;
+}
+#list-container ol li {
+  margin-top: 30px;
+  list-style-type: numeric;
+  text-align: left;
+  list-style-position: inside;
+}
+
+#list-container ol {
+  background: #8080801f;
+  padding: 5px;
+  border-radius: 10px;
+  max-height: 50vh;
+  scroll-behavior: smooth;
+  overflow-x: auto;
+}
+
+#list-container {
+  width: 500px;
+  margin: auto;
+}
+
+body {
+  text-align: center;
+}
+
+input[type='text'] {
+  width: 300px;
+  padding: 10px;
+  border: 2px solid gray;
+  border-radius: 5px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+#add-btn {
+  background: royalblue;
+  float: none;
+  margin-left: 1em;
+  padding: 10px;
+}
+
+@media only screen and (max-width: 500px) {
+  #app,
+  #list-container {
+    width: 100% !important;
+  }
+  #add-btn {
+    margin-left: none;
+    margin-top: 1em;
+  }
+}
