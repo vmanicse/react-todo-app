@@ -5,10 +5,11 @@ export default function AddTodo({ todoList, updateTodoList }) {
   const todoInputRef = useRef('');
 
   useEffect(() => {
-    todoInputRef.current.focus();
     if (todoList.length != 0)
       localStorage.setItem('todoList', JSON.stringify(todoList));
   });
+
+  useEffect(() => focusOnAddTodoInputField(), []);
 
   function addNewTodo() {
     let value = todoInputRef.current.value;
@@ -18,10 +19,15 @@ export default function AddTodo({ todoList, updateTodoList }) {
       return [...prevTodos, newTodoObj];
     });
     clearInputField();
+    focusOnAddTodoInputField();
   }
 
   function clearInputField() {
     todoInputRef.current.value = '';
+  }
+
+  function focusOnAddTodoInputField() {
+    todoInputRef.current.focus();
   }
 
   return (
