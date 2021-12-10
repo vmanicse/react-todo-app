@@ -10,10 +10,14 @@ h1 {
   float: right;
   border-radius: 3px;
   padding: 5px;
-  background-color: red;
+  background-color: #d13a3a;
   color: white;
   font-weight: 700;
   cursor: pointer;
+}
+
+.delete-btn:hover {
+  background: #bb1a1a;
 }
 
 .list-item {
@@ -69,6 +73,10 @@ input[type='text'] {
   float: none;
   margin-left: 1em;
   padding: 10px;
+}
+
+#add-btn:hover {
+  background: #1446dd;
 }
 
 @media only screen and (max-width: 500px) {
