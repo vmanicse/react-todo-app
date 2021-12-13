@@ -10,6 +10,7 @@ export default function TodoList({ todoList, updateTodoList }) {
       else if (item.todo === todo && index !== i) return item;
     });
     updateTodoList(filteredList);
+    localStorage.setItem('todoList', JSON.stringify(filteredList));
   };
 
   function deleteAllTodos() {
